@@ -1,15 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchHotels } from "../../services/hotelService";
+import { fetchAvailableHotels } from "../../services/hotelService";
 
-// Asynchronous thunk to fetch hotels from the service
 export const searchHotels = createAsyncThunk(
   "hotels/searchHotels",
-  async (query) => {
-    const hotels = await fetchHotels();
-    // Optionally filter hotels by the query here
-    return hotels.filter((hotel) =>
-      hotel.name.toLowerCase().includes(query.toLowerCase())
-    );
+  async ({ location, fromDate, toDate }) => {
+    const hotels = await fetchAvailableHotels(location, fromDate, toDate);
+    return hotels;
   }
 );
 
