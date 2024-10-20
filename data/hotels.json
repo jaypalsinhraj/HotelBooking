@@ -1,0 +1,92 @@
+{
+  "uuid": "7d79629f-6a14-4e04-9dbf-ce4ec7dcf54f",
+  "lastMigration": 32,
+  "name": "Hotels",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "aae502d9-80e3-4d4f-b5ea-7d381ffa0bc8",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/hotels",
+      "responses": [
+        {
+          "uuid": "dfc7807d-52ae-426d-af87-d8b287aaf665",
+          "body": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"Hotel Sunshine\",\r\n        \"location\": \"New York\"\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"name\": \"Sea View Resort\",\r\n        \"location\": \"California\"\r\n    },\r\n    {\r\n        \"id\": 3,\r\n        \"name\": \"Mountain Escape\",\r\n        \"location\": \"Colorado\"\r\n    }\r\n]\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "aae502d9-80e3-4d4f-b5ea-7d381ffa0bc8"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
